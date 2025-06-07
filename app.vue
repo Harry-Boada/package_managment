@@ -73,11 +73,8 @@
           
         </article>
 
-<<<<<<< HEAD
-        <article id="experience" class="relative rounded-xl overflow-hidden w-11/12 max-w-lg h-9/12 mx-auto my-10 md:my-0 shadow-md transition-all duration-5000 ease-in-out">
-=======
         <article id="experience" class="relative rounded-xl overflow-hidden w-11/12 max-w-sm h-9/12 mx-auto my-10 md:my-0 shadow-md transition-all duration-5000 ease-in-out">
->>>>>>> dev
+
           <img :src="current.image" alt="Experiencia de usuario" class="w-full h-full object-cover brightness-50"/>
           <div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
             <p class="text-lg font-semibold italic">{{ current.comment }}</p>
@@ -137,11 +134,9 @@
         </div>
       </section>
 
-<<<<<<< HEAD
-    <section class="p-6 bg-[#f2f9ff] mx-auto rounded-lg shadow-md space-y-4 w-full">
-=======
+
     <section class="p-6 bg-[#EBFEF6] mx-auto rounded-lg  space-y-4 w-full">
->>>>>>> dev
+
       <h2 class="text-2xl font-bold text-center">Cotiza tu envío</h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -165,11 +160,11 @@
         </div>
 
         <div>
-<<<<<<< HEAD
+
           <label>Valor comercial (COP)</label>
-=======
+
           <label>Valor comercial del paquete (COP)</label>
->>>>>>> dev
+
           <input v-model.number="valorDeclarado" type="number" class="w-full border p-2 rounded" />
         </div>
       </div>
@@ -179,16 +174,6 @@
       </div>
     </section>
 
-<<<<<<< HEAD
-    <section class="w-full mt-32">
-      <h3 class="text-center text-2xl grid grid-cols-1">Entrega rapida, mente tranquila, <span class="font-bold">esa es la ventaja de OnPackage.</span></h3>
-      <div class="w-1/2 flex justify-center">
-        <img class="w-full object-fit mx-auto" src="/imagenes/conductor.webp" alt="Conductor y ruta">
-      </div>
-      
-    </section>
-
-=======
     <section class="w-full mt-16 ">
       <h3 class="text-center text-2xl grid grid-cols-1 mb-8">Entrega rapida, mente tranquila, <span class="font-bold">esa es la ventaja de OnPackage.</span></h3>
       <article class="grid w-full mx-2 mt-4 md:grid-cols-2 place-content-center md:mt-2">
@@ -350,10 +335,76 @@
       
     </section>
 
-    
-
->>>>>>> dev
+     <section class="grid place-content-center mt-10 w-full mx-1">
+      <img src="/imagenes/stars_plataform.webp" alt="Experiencias de usuarios" class="max-w-sm object-cover md:max-w-lg mx-2">
     </section>
+
+    <section id="questions" class="grid place-content-center p-6">
+    <h3 class="font-bold text-2xl mb-6 text-center">Preguntas Frecuentes</h3>
+    <div class="max-w-2xl w-full">
+      <!-- recorrer faqs mediante las FAQS elegida mendiante el indice para dar la respuesta -->
+      <div v-for="(faq, index) in faqs" :key="index" class="border-b border-gray-200 py-4"> 
+        <div class="flex justify-between items-center cursor-pointer" @click="toggleQuestion(index)">
+          <p class="font-medium text-lg pr-4">{{ faq.question }}</p> 
+          <button 
+            class="flex-shrink-0 transition-transform duration-300 ease-in-out" 
+            :class="{ 'rotate-180': openQuestions[index] }"
+          >
+            <img src="/imagenes/menu_question.svg" alt="Toggle FAQ" class="w-[18px] h-[18px]">
+          </button>
+        </div>
+        <!-- Respuesta toogle section -->
+        <div class="overflow-hidden transition-all duration-300 ease-in-out" :class="openQuestions[index] ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'">
+          <div class="text-gray-600 pb-2">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section id="marketing" class="rounded-lg grid place-content-center bg-[#000000] w-11/12 mx-auto my-4">
+      <span class="mt-4 text-2xl font-bold bg-gradient-to-r from-[#8feaff] via-[#8feaff] to-[#a5ff6c] bg-[length:100%_100%] bg-clip-text text-transparent ">¿Listo para enviar tus paquetes?</span>
+      <p class="text-sm font-light text-[#ffff] justify-center my-8">Envia primero con él, agrega tu equipamento y paga después.</p>
+
+      <div class="flex mb-4">
+        <button onclick="" class="w-full md:w-1/3 mb-4 text-md rounded-md mx-auto p-2 bg-[linear-gradient(96deg,_#8feaff_0.1%,_#a5ff6c)] ease-in delay-200 cursor-pointer text-sm">Inica Sesión</button>
+        <button onclick="" class="w-full md:w-1/3 mb-4 text-md rounded-md mx-auto p-2 border-2 border-amber-50 text-[#ffff] text-sm hover:bg-[#cccc] ease-in delay-200 cursor-pointer">Registrtate</button>
+      </div>
+    </section>
+
+
+
+
+    </section>
+
+    <footer id="footer" class="w-full bg-black mt-12">
+        <div class="flex flex-col items-center space-y-6 py-8 px-4 md:grid md:grid-cols-3  md:gap-6 md:space-y-0 md:px-8">
+          <span class="text-[18px] text-center text-[#ffff] font-bold md:col-span-3">
+            ¿Donde nos encuentras?
+          </span>
+          <div class="flex items-center space-x-2">
+            <img src="/imagenes/email.svg" alt="Correo" class="w-6" />
+            <span class="text-[#ffff]">harrisonboada@gmail.com</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <img src="/imagenes/instagram.svg" alt="Instagram" class="w-6" />
+            <span class="text-[#ffffff]">harryingmec0</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <img src="/imagenes/whatsapp.svg" alt="WhatsApp" class="w-6" />
+            <span class="text-[#ffffff]">+57 3003339871</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <img src="/imagenes/linkedin.svg" alt="LinkedIn" class="w-6" />
+            <span class="text-[#ffffff]">linkedin.com/in/harrisonesteban</span>
+          </div>
+          <div class="flex items-center space-x-2 ml-6">
+            <img src="/imagenes/twitter.svg" alt="Twitter" class="w-6" />
+            <span class="text-[#ffffff]">@HarrisonBoada</span>
+          </div>
+        </div>
+      </footer>
   </main>  
 </template>
 
@@ -366,6 +417,7 @@
   const toggleMenu = () => {
     showMenu.value = !showMenu.value
   }
+
 
   const experiences = ref<Experience[]>([])
   const currentIndex = ref(0) // Índice de la experiencia actual (comienza en 0).
@@ -456,5 +508,48 @@ const resultado = computed(() => {
 
   return Math.round(precio)
 })
+
+
+// ------------------- FAQ ---------------
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+// Estado reactivo para controlar qué preguntas están abiertas
+const openQuestions = ref<Record<number, boolean>>({});
+
+// Datos de las preguntas frecuentes
+const faqs: FAQ[] = [
+  {
+    question: "¿OnPackage es un nuevo servicio de entrega?",
+    answer: "No, OnPackage lleva 30 años en la industria con el software de gestión de entregas que te ayuda a gestionar tus entregas de forma eficiente."
+  },
+  {
+    question: "¿Cómo funciona el seguimiento de entregas?",
+    answer: "El sistema permite rastrear en tiempo real todas las entregas, desde la preparación hasta la entrega final al cliente."
+  },
+  {
+    question: "¿Qué costo tiene el servicio?",
+    answer: "Ofrecemos la cotización inmediata según las necesidades que requieras. Contacta con nuestro equipo de ventas para obtener una cotización personalizada y a detalle."
+  },
+  {
+    question: "¿Cómo beneficia a mis clientes finales?",
+    answer: "Ofrecemos seguimiento en tiempo real con actualizaciones automáticas por SMS/email, ventanas de entrega precisas, opciones de reprogramación y notificaciones de llegada del conductor."
+  },
+  {
+    question: "¿Cómo manejan la gestión de devoluciones?",
+    answer: "Incluimos flujos completos para reversa logística: solicitudes de recogida, autorizaciones, generación de guías inversas y seguimiento especializado para devoluciones."
+  },
+  {
+    question: "¿Cómo garantizan la seguridad de los paquetes?",
+    answer: "Implementamos verificaciones con OTP, captura de firmas digitales, geocercas, fotocomprobantes y seguros personalizados por envío."
+  },
+];
+
+// Función para alternar la visibilidad de una pregunta
+const toggleQuestion = (index: number): void => {
+  openQuestions.value[index] = !openQuestions.value[index];
+};
 
 </script>
