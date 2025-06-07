@@ -73,7 +73,7 @@
           
         </article>
 
-        <article id="experience" class="relative rounded-xl overflow-hidden w-11/12 max-w-lg h-9/12 mx-auto my-10 md:my-0 shadow-md transition-all duration-5000 ease-in-out">
+        <article id="experience" class="relative rounded-xl overflow-hidden w-11/12 max-w-sm h-9/12 mx-auto my-10 md:my-0 shadow-md transition-all duration-5000 ease-in-out">
           <img :src="current.image" alt="Experiencia de usuario" class="w-full h-full object-cover brightness-50"/>
           <div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
             <p class="text-lg font-semibold italic">{{ current.comment }}</p>
@@ -133,7 +133,7 @@
         </div>
       </section>
 
-    <section class="p-6 bg-[#f2f9ff] mx-auto rounded-lg shadow-md space-y-4 w-full">
+    <section class="p-6 bg-[#EBFEF6] mx-auto rounded-lg  space-y-4 w-full">
       <h2 class="text-2xl font-bold text-center">Cotiza tu envío</h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -157,7 +157,7 @@
         </div>
 
         <div>
-          <label>Valor comercial (COP)</label>
+          <label>Valor comercial del paquete (COP)</label>
           <input v-model.number="valorDeclarado" type="number" class="w-full border p-2 rounded" />
         </div>
       </div>
@@ -167,13 +167,168 @@
       </div>
     </section>
 
-    <section class="w-full mt-32">
-      <h3 class="text-center text-2xl grid grid-cols-1">Entrega rapida, mente tranquila, <span class="font-bold">esa es la ventaja de OnPackage.</span></h3>
-      <div class="w-1/2 flex justify-center">
-        <img class="w-full object-fit mx-auto" src="/imagenes/conductor.webp" alt="Conductor y ruta">
-      </div>
+    <section class="w-full mt-16 ">
+      <h3 class="text-center text-2xl grid grid-cols-1 mb-8">Entrega rapida, mente tranquila, <span class="font-bold">esa es la ventaja de OnPackage.</span></h3>
+      <article class="grid w-full mx-2 mt-4 md:grid-cols-2 place-content-center md:mt-2">
+        
+        <div class="flex items-center flex-col md:order-2 md:items-start">
+          <div class="flex p-1 w-[240px] bg-[#a4f6d4] items-center mt-2 rounded-lg">
+            <span class="mr-2">
+              <img src="/imagenes/stars.svg" alt="IA integrada" class="w-[18px] ml-1">
+            </span>
+            <span class="text-xs font-medium">Envío automático mediante IA</span>
+          </div>
+
+          <h4 class="font-medium text-2xl text-left mt-4">Gestión de entregas faciles y dinamicas con soluciones automatizadas</h4>
+          <p class="text-sm font-light font-sans mt-2 text-justify md:text-left md:px-0 md:pr-4 px-4">
+            Simplificar vida con nuestro servicios, impulsado por inteligencia artificial, las opciones de entrega accesibles, flexibles y el acceso sin problemas ni retardos en tus entregas o daños en tus paquetes, ¡pruebanos!.
+          </p>
+
+          <ul class="my-8 grid grid-cols-1">
+            <li class="flex flex-row items-center  py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">IA ecológica que diseña rutas de envío con menor huella de carbono, sin comprometer la velocidad de entrega</span>
+            </li>
+            <li class="flex flex-row items-center py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Algoritmos predictivos que optimizan cada ruta de envío en tiempo real para reducir costos y acelerar entregas</span>
+            </li>
+            <li class="flex flex-row items-center py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Sistemas inteligentes que rastrean y ajustan cada envío en ruta para garantizar que llegue seguro y sin sorpresas.</span>
+            </li>
+          </ul>
+
+        </div>
+        <div class=" max-w-xs flex justify-center mx-auto my-4 p-4 md:order-1 md:max-w-md">
+          <img class="w-full object-cover mx-auto max-w-xs rounded-lg md:max-w-md" src="/imagenes/conductor.webp" alt="Conductor y ruta">
+        </div>
+      </article>
+      
       
     </section>
+
+    <section class="w-full mt-16 bg-[#EBFEF6]">
+      <article class="grid w-full mx-2 mt-4 md:grid-cols-2 place-content-center md:mt-2">
+        
+        <div class="flex items-center flex-col md:ml-8 md:items-start mt-32">
+          <div class="flex p-1 w-[240px] bg-[#a4f6d4] items-center mt-2 rounded-lg">
+            <span class="mr-2">
+              <img src="/imagenes/package-box.svg" alt="IA integrada" class="w-[18px] ml-1">
+            </span>
+            <span class="text-xs font-medium">Calificación gestión de entregas</span>
+          </div>
+
+          <h4 class="font-medium text-2xl text-left mt-4">Mejora continuamente con las valoraciones de tus entregas</h4>
+          <p class="text-sm font-light font-sans mt-2 text-justify md:text-left md:px-0 md:pr-4 px-4">
+            Recoge opiniones en cada entrega y obtén calificaciones directamente de tus clientes. Identifica patrones, detecta problemas recurrentes y reconoce a los mejores conductores. Usa estas métricas para mejorar la experiencia de entrega y tomar decisiones basadas en datos reales.
+          </p>
+
+          <ul class="my-8 grid grid-cols-1">
+            <li class="flex flex-row items-center  py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Recoge automáticamente calificaciones después de cada entrega</span>
+            </li>
+            <li class="flex flex-row items-center py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Visualiza tendencias y niveles de satisfacción en tiempo real</span>
+            </li>
+            <li class="flex flex-row items-center py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Identifica oportunidades de mejora y destaca a los mejores conductores.</span>
+            </li>
+          </ul>
+
+        </div>
+        <div class=" max-w-xs flex justify-center mx-auto my-4 p-4 md:max-w-md">
+          <img class="w-full object-cover mx-auto max-w-xs rounded-lg md:max-w-md" src="/imagenes/Rate_your_experience.webp" alt="Conductor y ruta">
+        </div>
+      </article>
+      
+      
+    </section>
+
+    <section class="w-full mt-16">
+      <article class="grid w-full mx-2 mt-4 md:grid-cols-2 place-content-center md:mt-2">
+        
+        <div class="flex items-center flex-col md:items-start mt-8 md:order-2 md:ml-0">
+          <div class="flex p-1 w-[240px] bg-[#a4f6d4] items-center mt-2 rounded-lg justify-center">
+            <span class="mr-2">
+              <img src="/imagenes/route_finish.svg" alt="Enrutamiento de paquetes" class="w-[18px] ml-1">
+            </span>
+            <span class="text-xs font-medium">Enrutamiento</span>
+          </div>
+
+          <h4 class="font-medium text-2xl text-left mt-4">Entrega un 35% más rápido con la optimización de rutas basada en inteligencia artificial</h4>
+          <p class="text-sm font-light font-sans mt-2 text-justify md:text-left md:px-0 md:pr-4 px-4">
+            Impulsa tu operación con algoritmos inteligentes que mejoran la planificación de rutas. Aumenta la velocidad de entrega, reduce tiempos muertos y mejora la satisfacción del cliente con tecnología de vanguardia. Supervisa el progreso en vivo y toma decisiones más ágiles en cada envío.
+          </p>
+
+          <ul class="my-8 grid grid-cols-1">
+            <li class="flex flex-row items-center py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] md:mx-4 mx-2" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Genera rutas optimizadas en segundos para maximizar recursos y reducir demoras</span>
+            </li>
+            <li class="flex flex-row items-center py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Supervisa cada entrega en tiempo real y asegúrate de que se cumplan los tiempos prometidos</span>
+            </li>
+            <li class="flex flex-row items-center py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Identifica oportunidades de mejora y destaca a los mejores conductores.</span>
+            </li>
+          </ul>
+
+        </div>
+        <div class=" max-w-xs flex justify-center mx-auto my-4 p-4 md:max-w-md">
+          <img class="w-full object-cover mx-auto max-w-xs rounded-lg md:max-w-md" src="/imagenes/enrute.webp" alt="Conductor y ruta">
+        </div>
+      </article>
+      
+      
+    </section>
+
+    <section class="w-full mt-16 bg-[#EBFEF6]">
+      <article class="grid w-full mx-2 mt-4 md:grid-cols-2 place-content-center md:mt-2">
+        
+        <div class="flex items-center flex-col md:ml-8 md:items-start mt-16">
+          <div class="flex p-1 w-[240px] bg-[#a4f6d4] items-center mt-2 rounded-lg">
+            <span class="mr-2">
+              <img src="/imagenes/partners.svg" alt="IA integrada" class="w-[18px] ml-1">
+            </span>
+            <span class="text-xs font-medium">Integracioness</span>
+          </div>
+
+          <h4 class="font-medium text-2xl text-left mt-4">Conecta tus plataformas favoritas, mejora cada entrega</h4>
+          <p class="text-sm font-light font-sans mt-2 text-justify md:text-left md:px-0 md:pr-4 px-4">
+            Integra tu operación con servicios líderes como Mercado Libre, PedidosYa, OCA, OCASA, Zapiet y Coordinadora. Unifica tus envíos, automatiza procesos y ofrece experiencias de entrega más rápidas y precisas sin modificar tu flujo de trabajo.
+          </p>
+
+          <ul class="my-8 grid grid-cols-1">
+            <li class="flex flex-row items-center  py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Conecta sin complicaciones con tus canales y plataformas de envío más usadas</span>
+            </li>
+            <li class="flex flex-row items-center py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Sincroniza automáticamente los pedidos y genera entregas más eficientes</span>
+            </li>
+            <li class="flex flex-row items-center py-2 ">
+              <img src="/imagenes/check.svg" class="w-[18px] mx-4" alt="">
+              <span class="text-sm font-semibold font-sans text-justify md:text-left md:px-0 md:pr-4 px-4">Mejora tiempos de entrega y visibilidad sin necesidad de desarrollos complejos.</span>
+            </li>
+          </ul>
+
+        </div>
+        <div class=" max-w-xs flex justify-center mx-auto my-4 p-4 md:max-w-md">
+          <img class="w-full object-cover mx-auto max-w-xs rounded-lg md:max-w-md" src="/imagenes/society.webp" alt="Conductor y ruta">
+        </div>
+      </article>
+      
+      
+    </section>
+
+    
 
     </section>
   </main>  
